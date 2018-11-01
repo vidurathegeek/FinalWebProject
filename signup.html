@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Web Development Project Assignment">
+    <meta name="author" content="vidurathegeek">
+    <!--
+    <meta http-equiv="refresh" content="2;url=signup.html">
+	-->
+	
+	<title>SignUp-GreenEarth</title>
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/landing-page.css" rel="stylesheet">
+
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" type="img/png" href="img/favicon.png"/>
+    <style type="text/css">
+        a.lol:hover {color: #aad805; font-size: 150%;}
+
+        /*go-to-top-button css*/
+        .gotopbtn{
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            background: #27ae60;
+            bottom: 40px;
+            right: 50px;
+
+            text-decoration: none;
+            text-align: center;
+            line-height: 58px;
+            color: white;
+            font-size: 15px;
+        }
+        html{
+            scroll-behavior: smooth;
+            height: 100%;
+        }
+
+		.centered {
+		    position: absolute;
+		    top: 50%;
+		    left: 38%;
+		    transform: translate(-50%, -300%);
+		    text-align: center;
+		}
+
+		.centered img {
+		    width: 150px;
+		}
+
+		* {
+		  box-sizing: border-box;
+		}
+
+		body, div {
+		  height: 100%;
+		}
+
+		section {
+		  height: 100%;
+		  width: 100%;
+		}
+
+		article {
+		  position: relative;
+		  top: 50%;
+		  left: 50%;
+		  padding: 1rem;
+		  text-align: center;
+		  transform: translate(-50%, -50%);
+		}
+
+		.left-half {
+		  float: left;
+		  width: 50%;
+		}
+		.right-half {
+		  float: left;
+		  width: 50%;
+		}
+
+		/* Sign-Up form css*/
+		h1{
+			margin: 0 0 10px 0;
+			font-weight: 300;
+			font-size: 28px;
+		}
+
+		input[type="text"]{
+			/*display: block;*/
+			box-sizing: border-box;;
+			margin: 20px;
+			padding: 4px;
+			width: 220px;
+			height: 32px;
+			border: none;
+			outline: none;
+			border-bottom: 1px solid #aaa;
+			font-family: roboto;
+			font-weight: 400;
+			font-size: 15px;
+			transition: 0.2s ease;
+		}
+
+		input[type="submit"]{
+			margin-bottom: 28px;
+			width: 120px;
+			height: 32px;
+			background: #aad805;
+			border: none;
+			border-radius: 2px;
+			color: #fff;
+			font-family: roboto;
+			font-weight: 500;
+			text-transform: uppercase;
+			transition: 0.2s ease;
+			cursor: pointer; 
+		}
+
+		input[type="submit"]:hover,
+		input[type="submit"]:focus{
+			background: #00CC00;
+			transition: 0.2s ease;
+		}
+    </style>
+	<script type="text/javascript">
+		function validate(){
+			if(document.newFom.fname.value == ""){
+				alert("First Name is Mandatory");
+				document.newFom.fname.style.borderColor = "red";
+				document.newFom.fname.focus();
+				return false;
+			}
+			if(document.newFom.lname.value == ""){
+				alert("Last Name is Mandatory");
+				document.newFom.lname.style.borderColor = "red";
+				document.newFom.lname.focus();
+				return false;
+			}
+			if(document.newFom.email.value == ""){
+				alert("Email is Mandatory");
+				document.newFom.email.style.borderColor = "red";
+				document.newFom.email.focus();
+			}	
+			var mail = document.newFom.email.value;
+			atpos = mail.indexOf("@");
+			dotpos = mail.lastIndexOf(".");
+			if(atpos < 1 || (dotpos - atpos <2)){
+				alert("Enter a valid Email");
+				document.newFom.email.focus();
+				return false;
+			}
+			alert("Form Submitted Sucessfully");
+			return true;
+		}
+	</script>
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand topnav" href="#about">
+                    <font color="aad805">Green </font><font color="8d8e6f">Earth</font></a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="lol" href="index.html"><font color="8d8e6f">Home</font></a>
+                    </li>
+                    <li>
+                        <a class="lol" href="index.html#services"><font color="8d8e6f">Services</font></a>
+                    </li>
+                    <li>
+                        <a class="lol" href="gallery.html"><font color="8d8e6f">Gallery</font></a>
+                    </li>
+                    <li>
+                        <a class="lol" href="about.html"><font color="8d8e6f">About</font></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+	<section class="container">
+	  <div class="left-half">
+	    <article>
+	    	<div class="centered">
+			    <img src="img/favicon.png" alt="Avatar man">
+			    <h1><font color="8d8e6f">Become a</font><font color="aad805"> Volunteer</font></h1>
+	      		<p><font color="8d8e6f">Join with us for a good cause.</font></p>
+			</div>
+	    </article>
+	  </div>
+	  <div class="right-half">
+	    <article>
+	    	<h1><font color="8d8e6f">Pack into for our mail list</font></h1>
+
+	    	<form action="insert.php" method="POST" name="newFom" onsubmit="return(validate())">
+
+			    <input type="text" name="fname" id="fname"placeholder="First Name" required>
+			    <input type="text" name="lname" id="lname" placeholder="Last Name" required>
+			    <input type="text" name="email" id="email" placeholder="name@example.com" required>
+
+			    <input type="submit" name="signup-button" value="Sign Up" id="submit">
+	    	</form>
+	    </article>
+	  </div>
+	</section>
+
+	<a class="gotopbtn" href="#"><i class="fa fa-arrow-up fa-2x"></i></a>
+	<footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-inline">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="index.html#services">Services</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="gallery.html">Gallery</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="about.html">About</a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted small">Copyright &copy; inivolabs 2018. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
